@@ -36,8 +36,11 @@
                                 @for (char col = 'A'; col <= 'H'; col++)
                                 {
                                     <td>
-                                        <p class="seat" data-seat-id="'@($" PC8{col}{row}")'"
-                                           onclick="returnSeatValue('@($" PC8{col}{row}")')" style="cursor: pointer;">
+                                        @* Generate seat ID *@
+                                        @{
+                                            var seatId = $"PC8_{col}{row}";
+                                        }
+                                        <p class="seat" data-seat-id="@seatId">
                                             <span class="seat-text">@($"{col}{row}")</span>
                                             <img class="seat-pic" src="~/images/seat/seat_empty.png" alt="Seat @($" PC8{col}{row}")" style="display: block; margin: 0 auto;" />
                                         </p>
@@ -95,20 +98,26 @@
     <div class="item-right">
         <div class="section-item">
             <div class="box-ticket-info">
-                <h3>Movie Name</h3>
-                <p>Theatre name </p>
-                <p>Date time</p>
-                <p>Room name</p>
-                <p>seatid</p>
+                <div class="movie-info">
+                    <div class="movie-info-item">
+                        <h3>Movie Name</h3>
+                        <p>Theatre name </p>
+                        <p>Date time</p>
+                        <p>Room name</p>
+                    </div>
+                    <div class="movie-image">
+                        <img src="~/images/baking-bad.png" />
+                    </div>
+                </div>            
                 <div class="box-tickets">
                     <h5>Số vé:</h5>
-                    <table class="table-box-1">
+                    <table class="table">
                         <tbody id="ticketTableBody">
                             <!-- Table rows will be dynamically added here -->
                         </tbody>
                     </table>
                     <h3 class="select-drink">CHỌN ĐỒ ĂN &amp; THỨC UỐNG</h3>
-                    <table class="table-box-2">
+                    <table class="table">
                         <tbody id="comboTableBody">
                             <!-- Table rows will be dynamically added here -->
                         </tbody>
