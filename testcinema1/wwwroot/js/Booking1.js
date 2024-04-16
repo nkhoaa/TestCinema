@@ -114,5 +114,6 @@ function updateTable() {
     tableBody.append(totalRow);
 }
 
+
 // Initial table update
 updateTable();

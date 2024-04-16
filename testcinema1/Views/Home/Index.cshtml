@@ -57,38 +57,38 @@
         <div class="combo-select">
             <div class="combo-box">
                 <div class="combo">
-                    <img src="https://cms.megagscinemas.vn//media/76090/popcorn-caramel-40oz.png" alt="">
+                    <img src="https://cms.megagscinemas.vn//media/76070/combo-share.png" alt="">
                     <div class="combo-info">
-                        <h4>Combo Name</h4>
+                        <h4>Combo Bắp và Coca</h4>
                         <div class="combo-number">
                             <i class="fa fa-minus-circle decrease"></i>
                             <span><input type="text" value="0" class="Qlty" readonly=""></span>
                             <i class="fa fa-plus-circle increase"></i>
-                            <span class="combo-price">70000</span>
+                            <span class="combo-price">80000</span>
                         </div>
                     </div>
                 </div>
                 <div class="combo">
                     <img src="https://cms.megagscinemas.vn//media/76090/popcorn-caramel-40oz.png" alt="">
                     <div class="combo-info">
-                        <h4>Combo Name</h4>
+                        <h4>Bắp Caramel</h4>
                         <div class="combo-number">
                             <i class="fa fa-minus-circle decrease"></i>
                             <span><input type="text" value="0" class="Qlty" readonly=""></span>
                             <i class="fa fa-plus-circle increase"></i>
-                            <span class="combo-price">70000</span>
+                            <span class="combo-price">45000</span>
                         </div>
                     </div>
                 </div>
                 <div class="combo">
-                    <img src="https://cms.megagscinemas.vn//media/76090/popcorn-caramel-40oz.png" alt="">
+                    <img src="https://i.pngimg.me/thumb/f/720/m2i8A0G6N4H7i8K9.jpg" alt="">
                     <div class="combo-info">
-                        <h4>Combo Name</h4>
+                        <h4>Coca</h4>
                         <div class="combo-number">
                             <i class="fa fa-minus-circle decrease"></i>
                             <span><input type="text" value="0" class="Qlty" readonly=""></span>
                             <i class="fa fa-plus-circle increase"></i>
-                            <span class="combo-price">70000</span>
+                            <span class="combo-price">40000</span>
                         </div>
                     </div>
                 </div>
@@ -133,78 +133,35 @@
                     <div class="show-error err">
                         <span></span>
                     </div>
-                    <input name="ctl00$ContentPlaceHolder1$txtCardName" type="text" id="txtCardName" class="infor-name" placeholder="Họ và Tên">
+                    <form method="post" asp-action="Pay" asp-controller="Home">
+                        <input name="txtCardName" type="text" id="txtCardName" placeholder="Họ và Tên">
 
-                    <input name="ctl00$ContentPlaceHolder1$txtEmail" type="text" id="txtEmail" class="infor-name" placeholder="Email">
+                        <input name="txtEmail" type="text" id="txtEmail" placeholder="Email">
 
-                    <input type="text" id="txtCustPhone" class="infor-phone" placeholder="Số điện thoại">
+                        <input type="text" id="txtCustPhone" placeholder="Số điện thoại">
+                    </form>
                 </div>
             </div>
-            @* <div class="box-method-pay">
-            <div class="head-title">
-            <h3>PHƯƠNG THỨC THANH TOÁN</h3>
-            <span class="span_number">4</span>
-            </div>
-            <div class="show-error-tt err">
-            <span></span>
-            </div>
-            <div class="box-card">
-            <ul>
-            <li>
-            <input type="radio" name="card-group" id="check_01" value="Credit Card">
-            <label for="check_01"><span></span><b>Thẻ Tín Dụng (Credit / Debit Card / Apple Pay)</b></label>
-            <div class="booking-debit-card">
-            <img src="Images/home/booking-debit-card.png" alt="">
-            </div>
-            </li>
-            <li>
-            <input type="radio" name="card-group" id="check_02" value="ATM">
-            <label for="check_02"><span></span><b>Thẻ Nội Địa (ATM Card)</b></label>
-            <div class="booking-atm-card">
-            <img src="Images/home/booking-atm-card.png" alt="">
-            </div>
-            </li>
-            <li>
-            <input type="radio" name="card-group" id="check_momo" value="MM">
-            <label for="check_momo"><span></span><b>MoMo</b></label>
-
-            </li>
-            <li>
-            <input type="radio" name="card-group" id="check_zalopay" value="ZP">
-            <label for="check_zalopay"><span></span><b>Ví ZaloPay</b></label>
-
-            </li>
-            <li>
-            <input type="radio" name="card-group" id="check_vnpay" value="VNP">
-            <label for="check_vnpay"><span></span><b>VNPay</b></label>
-
-            </li>
-            </ul>
-            <div class="check-agree">
-            <input id="chkTerms" type="checkbox" name="ctl00$ContentPlaceHolder1$chkTerms">
-            <label for="chkTerms">
-            <span></span>
-            <b>Tôi đã đọc và đồng ý với <a href="/chinh-sach-thanh-toan-ve-truc-tuyen/" target="_blank">Chính sách thanh toán vé trực tuyến</a></b>
-
-            </label>
-            <div style="color:#fb0202">
-            <p>Vé đã mua không thể đổi hoặc hoàn tiền.</p>
-            <p>Mã vé sẽ được gửi qua tin nhắn SMS và Email đã nhập.</p>
-            </div>
-            </div>
-            </div>
-            </div> *@
             <div class="box-pay">
                 <span>
                     <span class="img-loading" style="position: absolute; top: 45%">
                         <img src="~/images//loading.gif" style="width: 25px" alt="loading" />
                     </span>
-                    <input type="button" value="Thanh Toán" />
+                    <form id="paymentForm" asp-action="Pay" asp-controller="Home">
+                        <!-- Other form fields go here -->
+                        <input id="paymentButton" type="submit" name="payment" value="Thanh Toán" />
+                    </form>
                 </span>
             </div>
         </div>
     </div>
 </div>
 
+<script>
+    function submitPaymentForm() {
+        document.getElementById("paymentForm").submit();
+    }
+</script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="~/js/booking1.js"></script>
+<script src="~/js/payment.js"></script>

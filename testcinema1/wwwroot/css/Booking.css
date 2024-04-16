@@ -406,7 +406,7 @@ p {
             margin-top: -10px
         }
 
-            .content-item .item-right .section-item .box-pay input[type="submit"], .content-item .item-right .box-pay input[type="button"] {
+            .content-item .item-right .section-item .box-pay input[type="submit"]/*, .content-item .item-right .box-pay input[type="button"]*/ {
                 width: 150px;
                 height: 46px;
                 font-size: 16px;
@@ -418,11 +418,11 @@ p {
                 text-align: left
             }
 
-        .content-item .item-right .section-item .box-pay input[type="button"] {
+        .content-item .item-right .section-item .box-pay input[type="submit"] {
             padding-left: 23px
         }
 
-        .content-item .item-right .section-item .box-pay input[type="submit"]:hover, .content-item .item-right .box-pay input[type="button"]:hover {
+        .content-item .item-right .section-item .box-pay input[type="submit"]:hover, /*.content-item .item-right .box-pay input[type="button"]:hover*/ {
             background: #FFBE00
         }
 
